@@ -27,11 +27,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        editText=(EditText) findViewById(R.id.editText);
-        editText1=(EditText) findViewById(R.id.editText1);
+        editText= findViewById(R.id.editText);
+        editText1= findViewById(R.id.editText1);
 
-        button=(Button) findViewById(R.id.button);
-        button1=(Button) findViewById(R.id.button1);
+        button= findViewById(R.id.button);
+        button1= findViewById(R.id.button1);
         button.setEnabled(false);
 
         editText.addTextChangedListener(new TextWatcher(){
@@ -72,10 +72,10 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent acceuilActivityIntent = new Intent(MainActivity.this,acceuilActivity.class);
-                startActivity(acceuilActivityIntent);
+                Intent FaculteActivityIntent = new Intent(MainActivity.this,FaculteActivity.class);
+                startActivity(FaculteActivityIntent);
             }
         });
-        };
-    }
+        }
+}
 

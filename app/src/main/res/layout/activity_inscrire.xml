@@ -14,7 +14,7 @@
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:layout_marginTop="70dp"
-        android:hint="Nom"
+        android:hint="nom"
         android:paddingLeft="40dp"
         android:textColorHint="#000"
         android:textSize="22dp"></EditText>
@@ -23,17 +23,18 @@
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:layout_marginTop="1dp"
-        android:hint="Prenom"
+        android:hint="prenom"
         android:paddingLeft="40dp"
         android:textColorHint="#000"
         android:textSize="22dp"></EditText>
 
     <EditText
-        android:id="@+id/Email"
+        android:id="@+id/email"
         android:layout_width="370dp"
         android:layout_height="50dp"
         android:layout_marginTop="1dp"
-        android:hint="Email"
+        android:hint="email"
+        android:inputType="textEmailAddress"
         android:textColorHint="#000"
         android:paddingLeft="40dp"
         android:textSize="22dp"
@@ -57,37 +58,47 @@
         android:textSize="22dp"
         android:inputType="textPassword"
         ></EditText>
-    <TextView
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:paddingLeft="40dp"
-        android:hint="vous etes ?"
-        android:textColorHint="#000"
-        android:textSize="22dp"
-        android:layout_marginTop="10dp"
-        android:id="@+id/TV"
-        ></TextView>
 
-    <CheckBox
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:paddingLeft="40dp"
+            android:hint="vous etes ?"
+            android:textColorHint="#000"
+            android:textSize="22dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/TV"
+            ></TextView>
+
+
+    <RadioButton
         android:layout_width="250dp"
         android:layout_height="30dp"
         android:id="@+id/etud"
         android:paddingLeft="10dp"
-        android:text="Etudiant "
+        android:text="etudiant "
         android:textColorHint="#000"
         android:textSize="22dp"
         android:layout_marginStart="100dp"
-        ></CheckBox>
-    <CheckBox
+        ></RadioButton>
+    <RadioButton
         android:layout_width="250dp"
         android:id="@+id/prof"
         android:layout_height="30dp"
         android:paddingLeft="10dp"
-        android:text="Enseignent "
+        android:text="enseignent "
         android:textColorHint="#000"
         android:textSize="22dp"
         android:layout_marginStart="100dp"
-        ></CheckBox>
+        ></RadioButton>
+    </RadioGroup>
 <Button
     android:layout_width="150dp"
     android:layout_height="50dp"

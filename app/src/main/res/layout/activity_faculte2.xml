@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FaculteActivity"
+    android:orientation="vertical"
+    android:background="@drawable/fa">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="5dp"
+        android:id="@+id/Ntic"
+        android:text="Faculté des nouvelles technologies"
+        android:textColor="#008080"></Button>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:text="Institut bibliothéconomie "
+        android:textColor="#006666"
+
+        ></Button>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:text="Faculté des sciences economiques"
+            android:textColor="#005959"
+
+
+           ></Button>
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="10dp"
+            android:text="Faculté des sciences humaines et sociales"
+            android:textColor="#004040"
+
+
+
+            ></Button>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="5dp"
+            android:text="Faculté des psychologie"
+            android:textColor="#003333"></Button>
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:text="Institut des sciences des activité sportives"
+            android:textColor="#001919"></Button>
+
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
+
+
+
+

@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MasterActivity"></activity>
+        <activity
+            android:name=".ForumActivity"
+            android:label="@string/title_activity_forum"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".FaculteActivity" />
+        <activity android:name=".MasterActivity" />
         <activity android:name=".LicenceActivity" />
         <activity android:name=".TrancommunActivity" />
         <activity android:name=".acceuilActivity" />
@@ -21,12 +26,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <!-- MAIN ACTIVITY -->
-
-
-
-
-</application>
+    </application>
 
 </manifest>
