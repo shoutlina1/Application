@@ -8,9 +8,9 @@ import android.view.View;
 import android.widget.Button;
 
 public class acceuilActivity extends AppCompatActivity {
-    private Button Trancommun ;
-    private Button Licence ;
-    private Button Master ;
+
+    Button Trancommun, Licence, Master ;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -16,7 +16,7 @@
         android:layout_marginBottom="0dp"
         android:hint="s'identifier:"
         android:paddingTop="200dp"
-        android:id="@+id/editText"></EditText>
+        android:id="@+id/username"></EditText>
 
 
 
@@ -27,7 +27,7 @@
         android:layout_marginStart="150dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="10dp"
-        android:id="@+id/editText1"
+        android:id="@+id/password"
 
         android:paddingTop="10dp"
 
@@ -41,7 +41,7 @@
         android:layout_gravity="center"
         android:layout_marginBottom="10dp"
         android:hint="se connecter "
-        android:id="@+id/button"></Button>
+        android:id="@+id/login"></Button>
 
     <Button
         android:layout_width="wrap_content"
@@ -49,6 +49,6 @@
         android:layout_gravity="center"
         android:hint="s'inscrire"
         android:paddingTop="5dp"
-        android:id="@+id/button1"></Button>
+        android:id="@+id/inscription"></Button>
 
 </LinearLayout>
