@@ -24,7 +24,7 @@ import android.view.Menu;
 public class ForumActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
-
+/*
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,4 +66,6 @@ public class ForumActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+ */
 }

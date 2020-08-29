@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "321967099159",
+    "firebase_url": "https://nticlearning-989cb.firebaseio.com",
+    "project_id": "nticlearning-989cb",
+    "storage_bucket": "nticlearning-989cb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:321967099159:android:a171937f460e47a3c6bb52",
+        "android_client_info": {
+          "package_name": "com.example.nticetudier"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "321967099159-7vjf5hclt5ntjeq9fm1mu5489kiarq50.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.nticetudier",
+            "certificate_hash": "3517ee5eea4b8867be8a1b966dbe120d81600761"
+          }
+        },
+        {
+          "client_id": "321967099159-7e8dniq0bsgi7mh0hbgo72qprgevb40m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLGHqAMvtDGVu2bj90qexl5yGY3vJe9As"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "321967099159-7e8dniq0bsgi7mh0hbgo72qprgevb40m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

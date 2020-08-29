@@ -14,7 +14,7 @@
         android:layout_width="282dp"
         android:layout_height="39dp"
         android:background="@drawable/round_edit_signup"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="110dp"
         android:layout_gravity="center"
         android:hint="Nom"
         android:paddingLeft="20dp"
