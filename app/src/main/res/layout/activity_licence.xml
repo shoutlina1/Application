@@ -24,6 +24,7 @@
             android:layout_marginBottom="20dp"
             android:background="#eee"
             android:text="TI"
+            android:id="@+id/TI"
 
             android:textSize="18sp"></Button>
 

@@ -18,9 +18,9 @@ public class acceuilActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_acceuil);
 
-        Trancommun=(Button)findViewById(R.id.l1l2);
-        Licence=(Button) findViewById(R.id.Lic);
-        Master=(Button) findViewById(R.id.Master);
+        Trancommun= findViewById(R.id.l1l2);
+        Licence= findViewById(R.id.Lic);
+        Master= findViewById(R.id.Master);
 
         Trancommun.setOnClickListener(new View.OnClickListener() {
             @Override

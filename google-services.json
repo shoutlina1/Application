@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1038862161721",
+    "firebase_url": "https://nticetudier.firebaseio.com",
+    "project_id": "nticetudier",
+    "storage_bucket": "nticetudier.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1038862161721:android:de94a95e95659c210b7ae8",
+        "android_client_info": {
+          "package_name": "com.example.nticetudier"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1038862161721-8t0fujd4d7ltdev73fses4cfcqk2s9kj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.nticetudier",
+            "certificate_hash": "bb9bcd1caa4c8c446ddcd895210c15b26280523d"
+          }
+        },
+        {
+          "client_id": "1038862161721-tb2dta9u41bn6dvrfd2aev13cq2s4pej.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0IhrWzz2bfZ4suWnfaQa8ckfOC4_JupQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1038862161721-tb2dta9u41bn6dvrfd2aev13cq2s4pej.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

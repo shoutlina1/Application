@@ -21,6 +21,7 @@
             android:layout_marginBottom="20dp"
             android:background="#eee"
             android:text="Licence 1"
+            android:id="@+id/L1"
 
             android:textSize="18sp"></Button>
 
@@ -32,6 +33,7 @@
             android:layout_marginBottom="150dp"
 
             android:text="Licence 2"
+            android:id="@+id/L2"
 
             android:textSize="18sp"></Button>
     </LinearLayout>
