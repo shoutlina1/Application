@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -24,100 +25,141 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import Model.Utilisateur;
 
-public class inscrireActivity extends AppCompatActivity {
+public class inscrireActivity extends AppCompatActivity implements View.OnClickListener {
 
-    EditText ETnom,ETprenom,ETusername,ETpassword,ETemail,ETnumero;
-    Button BTinscription;
-    FirebaseAuth auth;
-    FirebaseUser user;
-    DatabaseReference databaseReference;
-    ProgressDialog progressDialog;
+        EditText ETnom,ETprenom,ETusername,ETpassword,ETemail,ETnumero;
+        Button BTinscription;
+        FirebaseAuth auth;
+        FirebaseUser user;
+        DatabaseReference databaseReference;
+        ProgressDialog progressDialog;
+        //private CheckBox etudiant;
+        //private CheckBox enseignent ;
 
-    //private CheckBox etudiant;
-    //private CheckBox enseignent ;
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_inscription);
 
+            ETnom = findViewById(R.id.ETnom);
+            ETprenom = findViewById(R.id.ETprenom);
+            ETusername = findViewById(R.id.ETusername);
+            ETpassword = findViewById(R.id.ETpassword);
+            ETemail = findViewById(R.id.ETemail);
+            ETnumero = findViewById(R.id.ETnumero);
+            BTinscription = findViewById(R.id.Btn_inscription);
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_inscription);
+            progressDialog = new ProgressDialog(this);
+            auth = FirebaseAuth.getInstance();
 
-       // this.etudiant=(CheckBox) this.findViewById(R.id.etud);
-       // this.enseignent=(CheckBox) this.findViewById(R.id.prof);
-       // this.inscrir=(Button) this.findViewById(R.id.inscri);
+            BTinscription.setOnClickListener(this);
 
-        ETnom = findViewById(R.id.ETnom);
-        ETprenom = findViewById(R.id.ETprenom);
-        ETusername = findViewById(R.id.ETusername);
-        ETpassword = findViewById(R.id.ETpassword);
-        ETemail = findViewById(R.id.ETemail);
-        ETnumero = findViewById(R.id.ETnumero);
-        BTinscription = findViewById(R.id.Btn_inscription);
+        }
+        @Override
+        protected void onStart() {
+            super.onStart();
 
-        //databaseReference = FirebaseDatabase.getInstance().getReference("Utilisateur");
-        progressDialog = new ProgressDialog(this);
-        auth = FirebaseAuth.getInstance();
+            if (auth.getCurrentUser() != null) {
+                //handle the already login user
+            }
+        }
 
-    BTinscription.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
+    public void registerUser(){
 
-        final String Nom = ETnom.getText().toString();
-        final String Prenom = ETprenom.getText().toString();
-        final String Email = ETemail.getText().toString();
+        final String Nom = ETnom.getText().toString().trim();
+        final String Prenom = ETprenom.getText().toString().trim();
+        final String Email = ETemail.getText().toString().trim();
         final String Username= ETusername.getText().toString().trim();
-        final String Password = ETpassword.getText().toString();
-        final String Numero = ETnumero.getText().toString();
+        final String Password = ETpassword.getText().toString().trim();
+        final String Numero = ETnumero.getText().toString().trim();
 
-        if(TextUtils.isEmpty(Nom) || TextUtils.isEmpty(Prenom) || TextUtils.isEmpty(Email) || TextUtils.isEmpty(Username)
-                || TextUtils.isEmpty(Password) || TextUtils.isEmpty(Numero)){
-            Toast.makeText(inscrireActivity.this,"Veuillez remplir tous les champs SVP !",Toast.LENGTH_SHORT).show();
+        if (Nom.isEmpty()) {
+            ETnom.setError("Veuillez introduire votre nom SVP !");
+            ETnom.requestFocus();
+            return;
         }
 
-        progressDialog.setMessage("Registration User...");
-        progressDialog.show();
-        Utilisateur u = new Utilisateur(Nom,Prenom,Username,Password,Email,Numero);
-        //Log.d("My email ------------- ", u.getEmail());
-        registerUser(u);
-
+        if (Prenom.isEmpty()) {
+            ETprenom.setError("Veuillez introduire votre prénom SVP !");
+            ETprenom.requestFocus();
+            return;
         }
-    });
 
-    }
+        if (Username.isEmpty()) {
+            ETusername.setError("Veuillez introduire votre username SVP !");
+            ETusername.requestFocus();
+            return;
+        }
 
-    public void registerUser(final Utilisateur u){
+        if (!Patterns.EMAIL_ADDRESS.matcher(Email).matches()) {
+            ETemail.setError("Veuillez introduire un email correct SVP !");
+            ETemail.requestFocus();
+            return;
+        }
+
+        if (Password.isEmpty()) {
+            ETpassword.setError("Veuillez introduire un mot de passe SVP !");
+            ETpassword.requestFocus();
+            return;
+        }
+
+        if (Password.length() < 6) {
+            ETpassword.setError("Veuillez introduire un mot de passe supérieur à 6 caractères !");
+            ETpassword.requestFocus();
+            return;
+        }
+
+        if (Numero.isEmpty()) {
+            ETnumero.setError("Veuillez introduire un numéro de téléphone SVP !");
+            ETnumero.requestFocus();
+            return;
+        }
+
+        if (Numero.length() != 10) {
+            ETnumero.setError("Veuillez introduire un numéro de téléphone SVP !");
+            ETnumero.requestFocus();
+            return;
+        }
+
         //Log.d("My name ------------- ", u.getNom());
-        auth.createUserWithEmailAndPassword(u.getEmail(),u.getMot_de_passe()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+        auth.createUserWithEmailAndPassword(Email,Password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
-                    user = auth.getCurrentUser();
-                    user.sendEmailVerification()
-                            .addOnCompleteListener(new OnCompleteListener<Void>() {
-                                @Override
-                                public void onComplete(@NonNull Task<Void> task) {
-                                    if (task.isSuccessful()) {
 
-                                        FirebaseDatabase.getInstance().getReference("Utilisateur")
-                                                .child(String.valueOf(u.getId())).setValue(u).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    Utilisateur user = new Utilisateur(Nom,Prenom,Username,Password,Email,Numero);
+
+                    FirebaseDatabase.getInstance().getReference("Utilisateurs")
+                            .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                            .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                                             @Override
                                             public void onComplete(@NonNull Task<Void> task) {
-                                                Toast.makeText(inscrireActivity.this, "Inscription effectuée", Toast.LENGTH_SHORT).show();
-                                                auth.signOut();
-                                                Intent success = new Intent(inscrireActivity.this, acceuilActivity.class);
-                                                startActivity(success);
+                                                if (task.isSuccessful()) {
+                                                    //progressDialog.dismiss();
+                                                    Log.v("*** ------------- ","Ani hnaaaa");
+                                                    Toast.makeText(inscrireActivity.this, "Inscription effectuée", Toast.LENGTH_SHORT).show();
+                                                    //auth.signOut();
+                                                    //Intent success = new Intent(inscrireActivity.this, acceuilActivity.class);
+                                                    //startActivity(success);
+                                                } else {
+                                                }
                                             }
                                         });
-                                    } else {
-
-                                    }
-
-                                }
-                            });
-                }else {
+                            }else {
+                    Toast.makeText(inscrireActivity.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                        }
                 }
-            }
+
         });
     }
 
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.Btn_inscription:
+                registerUser();
+                break;
+        }
+
+    }
 }
