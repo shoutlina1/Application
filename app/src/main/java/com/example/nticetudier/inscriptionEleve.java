@@ -16,13 +16,17 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import Model.Eleve;
-import Model.Enseignant;
+import Model.Utilisateur;
 
 public class inscriptionEleve extends AppCompatActivity implements View.OnClickListener {
+
     EditText ETnom, ETprenom, ETusername, ETpassword, ETemail, ETnumero;
     EditText ETnum;
     Button BTinscription;
@@ -30,9 +34,7 @@ public class inscriptionEleve extends AppCompatActivity implements View.OnClickL
     FirebaseUser user;
     DatabaseReference databaseReference;
     ProgressDialog progressDialog;
-    //String profileUtilisateur;
-    //private CheckBox etudiant;
-    //private CheckBox enseignent
+
 
    @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,28 +73,13 @@ public class inscriptionEleve extends AppCompatActivity implements View.OnClickL
 
     public void registerUser() {
 
-
-/*
-        if(profileUtilisateur.matches("Parent")){
-            addEtudiant();
-            else{
-                addEnseignant();
-            }
-
-*/
-
-
-        //Log.d("My name ------------- ", u.getNom());
-
-        //  public void addEtudiant () {
-
-       final String Nom = ETnom.getText().toString().trim();
+        final String Nom = ETnom.getText().toString().trim();
         final String Prenom = ETprenom.getText().toString().trim();
         final String Email = ETemail.getText().toString().trim();
         final String Username = ETusername.getText().toString().trim();
         final String Password = ETpassword.getText().toString().trim();
         final String Numero = ETnumero.getText().toString().trim();
-        final String numdetudiant = ETnum.getText().toString().trim();
+        final String NumeroEtudiant = ETnum.getText().toString().trim();
 
         if (Nom.isEmpty()) {
             ETnom.setError("Veuillez introduire votre nom SVP !");
@@ -142,6 +129,14 @@ public class inscriptionEleve extends AppCompatActivity implements View.OnClickL
             return;
         }
 
+        if (NumeroEtudiant.isEmpty()) {
+            ETnum.setError("Veuillez introduire un numéro d'éetudiant SVP !");
+            ETnum.requestFocus();
+            return;
+        }
+
+
+
         auth.createUserWithEmailAndPassword(Email, Password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
@@ -149,11 +144,12 @@ public class inscriptionEleve extends AppCompatActivity implements View.OnClickL
                     user = auth.getCurrentUser();
                     user.sendEmailVerification();
                     // Utilisateur user = new Utilisateur(Nom, Prenom, Username, Password, Email, Numero);
-                    Eleve e = new Eleve(Nom, Prenom, Username, Password, Email, Numero,numdetudiant);
+                    Eleve e = new Eleve(Nom, Prenom, Username, Password, Email, Numero,NumeroEtudiant);
+                    getUsersCount(e,"Eleve");
 
                     FirebaseDatabase.getInstance().getReference("Eleve")
                             .child(String.valueOf(e.getId()))
-                            .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                            .setValue(e).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()) {
@@ -177,6 +173,24 @@ public class inscriptionEleve extends AppCompatActivity implements View.OnClickL
         });
 
     }
+
+    public void getUsersCount(final Utilisateur u, final String type) {
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference(type);
+        ref.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                u.setId(u.getId()+dataSnapshot.getChildrenCount());
+                return;
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+    }
+
     @Override
     public void onClick(View v) {
         switch (v.getId()) {

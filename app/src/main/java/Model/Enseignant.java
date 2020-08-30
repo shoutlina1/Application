@@ -4,8 +4,6 @@ public class Enseignant extends Utilisateur {
     private long id=1;
 
 
-
-
     public Enseignant() {
     }
 

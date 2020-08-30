@@ -20,8 +20,11 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import Model.Eleve;
 import Model.Enseignant;
@@ -154,10 +157,12 @@ public class inscrireActivity extends AppCompatActivity implements View.OnClickL
                     user.sendEmailVerification();
                     // Utilisateur user = new Utilisateur(Nom, Prenom, Username, Password, Email, Numero);
                     Enseignant en = new Enseignant(Nom, Prenom, Username, Password, Email, Numero);
+                    getUsersCount(en,"Enseignant");
+                    Log.v("Nbr d'enseignants -----",String.valueOf(en.getId()));
 
                     FirebaseDatabase.getInstance().getReference("Enseignant")
                             .child(String.valueOf(en.getId()))
-                            .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                            .setValue(en).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()) {
@@ -181,6 +186,24 @@ public class inscrireActivity extends AppCompatActivity implements View.OnClickL
         });
 
     }
+
+    public void getUsersCount(final Utilisateur u, final String type) {
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference(type);
+        ref.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                u.setId(u.getId()+dataSnapshot.getChildrenCount());
+                return;
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+    }
+
             @Override
             public void onClick(View v) {
                 switch (v.getId()) {

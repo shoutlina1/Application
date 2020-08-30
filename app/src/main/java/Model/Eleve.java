@@ -1,9 +1,8 @@
 package Model;
 
 public class Eleve extends Utilisateur {
-    private String numdetudiant  ;
-    private long id=1;
 
+    private String numdetudiant  ;
 
 
     public Eleve(){}
@@ -24,13 +23,5 @@ public class Eleve extends Utilisateur {
         this.numdetudiant = numdetudiant;
     }
 
-    @Override
-    public long getId() {
-        return id;
-    }
 
-    @Override
-    public void setId(long id) {
-        this.id = id;
-    }
 }

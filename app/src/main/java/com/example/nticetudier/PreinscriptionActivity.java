@@ -32,9 +32,9 @@ public class PreinscriptionActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(),"Vous avez choisi le profile : Elève !",Toast.LENGTH_LONG).show();
-                Intent inscrireActivityIntent =new Intent(PreinscriptionActivity.this,inscriptionEleve.class);
-                inscrireActivityIntent.putExtra("Type","Eleve");
-                startActivity(inscrireActivityIntent);
+                Intent inscripEleve =new Intent(PreinscriptionActivity.this,inscriptionEleve.class);
+                //inscrireActivityIntent.putExtra("Type","Eleve");
+                startActivity(inscripEleve);
             }
         });
 
@@ -44,9 +44,9 @@ public class PreinscriptionActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(),"Vous avez choisi le profile : Enseignant !",Toast.LENGTH_LONG).show();
-                Intent inscrireActivityIntent =new Intent(PreinscriptionActivity.this ,inscrireActivity.class);
-                inscrireActivityIntent.putExtra("type","Enseignant");
-                startActivity(inscrireActivityIntent);
+                Intent inscripEnseignant =new Intent(PreinscriptionActivity.this ,inscrireActivity.class);
+                //inscrireActivityIntent.putExtra("type","Enseignant");
+                startActivity(inscripEnseignant);
 
             }
         });
