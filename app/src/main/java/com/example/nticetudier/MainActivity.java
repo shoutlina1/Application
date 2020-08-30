@@ -35,8 +35,8 @@ public class MainActivity extends AppCompatActivity {
         inscription.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent inscrip = new Intent(MainActivity.this,inscrireActivity.class);
-                startActivity(inscrip);
+                Intent inscriptionActivityIntent= new Intent(MainActivity.this,PreinscriptionActivity.class);
+                startActivity(inscriptionActivityIntent);
             }
         });
         };

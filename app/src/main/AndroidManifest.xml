@@ -9,9 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".inscriptionEleve"></activity>
+        <activity android:name=".PreinscriptionActivity" />
         <activity
             android:name=".ForumActivity"
-
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".FaculteActivity" />
         <activity android:name=".MasterActivity" />

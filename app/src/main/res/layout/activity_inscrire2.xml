@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".inscriptionEleve"
+    android:background="@drawable/k"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/ETnom"
+        android:layout_width="282dp"
+        android:layout_height="39dp"
+        android:background="@drawable/round_edit_signup"
+        android:layout_marginTop="110dp"
+        android:layout_gravity="center"
+        android:hint="Nom"
+        android:paddingLeft="20dp"
+        android:textColor="@android:color/black"
+        android:textSize="18dp"
+        android:layout_marginBottom="20dp"></EditText>
+    <EditText
+        android:id="@+id/ETprenom"
+        android:layout_width="282dp"
+        android:layout_height="39dp"
+        android:background="@drawable/round_edit_signup"
+        android:layout_marginTop="1dp"
+        android:layout_gravity="center"
+        android:hint="Prénom"
+        android:paddingLeft="20dp"
+        android:textColor="@android:color/black"
+        android:textSize="18dp"
+        android:layout_marginBottom="20dp"></EditText>
+    <EditText
+        android:id="@+id/ETusername"
+        android:layout_width="282dp"
+        android:layout_height="39dp"
+        android:background="@drawable/round_edit_signup"
+        android:layout_marginTop="1dp"
+        android:layout_gravity="center"
+        android:hint="Username"
+        android:inputType="text"
+        android:paddingLeft="20dp"
+        android:textColor="@android:color/black"
+        android:textSize="18dp"
+        android:layout_marginBottom="20dp"></EditText>
+    <EditText
+        android:id="@+id/ETpassword"
+        android:layout_width="282dp"
+        android:layout_height="39dp"
+        android:background="@drawable/round_edit_signup"
+        android:layout_marginTop="1dp"
+        android:layout_gravity="center"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingLeft="20dp"
+        android:textColor="@android:color/black"
+        android:textSize="18dp"
+        android:layout_marginBottom="20dp"></EditText>
+
+    <EditText
+        android:id="@+id/ETemail"
+        android:layout_width="282dp"
+        android:layout_height="39dp"
+        android:background="@drawable/round_edit_signup"
+        android:layout_marginTop="1dp"
+        android:layout_gravity="center"
+        android:hint="Email"
+        android:paddingLeft="20dp"
+        android:textColor="@android:color/black"
+        android:textSize="18dp"
+        android:layout_marginBottom="20dp"></EditText>
+    <EditText
+        android:id="@+id/ETnumero"
+        android:layout_width="282dp"
+        android:layout_height="39dp"
+        android:background="@drawable/round_edit_signup"
+        android:layout_marginTop="1dp"
+        android:layout_gravity="center"
+        android:hint="Numéro"
+        android:inputType="number"
+        android:paddingLeft="20dp"
+        android:textColor="@android:color/black"
+        android:textSize="18dp"
+        android:layout_marginBottom="20dp"></EditText>
+    <EditText
+        android:id="@+id/ETnum"
+        android:layout_width="282dp"
+        android:layout_height="39dp"
+        android:background="@drawable/round_edit_signup"
+        android:layout_marginTop="1dp"
+        android:layout_gravity="center"
+        android:hint="Numéro d'etudiant"
+        android:inputType="number"
+        android:paddingLeft="20dp"
+        android:textColor="@android:color/black"
+        android:textSize="18dp"
+        android:layout_marginBottom="20dp"></EditText>
+
+    <!--    <TextView
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:paddingLeft="40dp"
+            android:hint="vous etes ?"
+            android:textColorHint="#000"
+            android:textSize="22dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/TV"
+            ></TextView>
+
+        <CheckBox
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:id="@+id/etud"
+            android:paddingLeft="10dp"
+            android:text="Etudiant "
+            android:textColorHint="#000"
+            android:textSize="22dp"
+            android:layout_marginStart="100dp"
+            ></CheckBox>
+        <CheckBox
+            android:layout_width="250dp"
+            android:id="@+id/prof"
+            android:layout_height="30dp"
+            android:paddingLeft="10dp"
+            android:text="Enseignent "
+            android:textColorHint="#000"
+            android:textSize="22dp"
+            android:layout_marginStart="100dp"
+            ></CheckBox>
+
+       -->
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:id="@+id/Btn_inscription"
+        android:hint="S'inscrire"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:textSize="22dp"
+        ></Button>
+
+
+</LinearLayout>

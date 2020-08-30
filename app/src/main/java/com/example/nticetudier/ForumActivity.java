@@ -2,7 +2,9 @@ package com.example.nticetudier;
 
 import android.os.Bundle;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import androidx.appcompat.app.AppCompatActivity;
+
+/*import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
 import android.view.View;
@@ -19,11 +21,11 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import android.view.Menu;
+import android.view.Menu;*/
 
 public class ForumActivity extends AppCompatActivity {
 
-    private AppBarConfiguration mAppBarConfiguration;
+   /* private AppBarConfiguration mAppBarConfiguration;
 /*
     @Override
     protected void onCreate(Bundle savedInstanceState) {
