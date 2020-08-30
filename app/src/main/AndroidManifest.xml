@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.nticetudier">
 
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,7 +11,8 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".ForumActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".FaculteActivity" />
         <activity android:name=".MasterActivity" />
         <activity android:name=".LicenceActivity" />
