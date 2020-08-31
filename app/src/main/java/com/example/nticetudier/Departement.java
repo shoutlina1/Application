@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class acceuilActivity extends AppCompatActivity {
+public class Departement extends AppCompatActivity {
 
     Button Trancommun, Licence, Master ;
 
@@ -25,14 +25,14 @@ public class acceuilActivity extends AppCompatActivity {
         Trancommun.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent TrancommunActivityIntent = new Intent(acceuilActivity.this,TrancommunActivity.class);
+                Intent TrancommunActivityIntent = new Intent(Departement.this,TrancommunActivity.class);
                 startActivity(TrancommunActivityIntent);
             }
         });
         Licence.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent LicenceActivityIntent = new Intent(acceuilActivity.this,LicenceActivity.class);
+                Intent LicenceActivityIntent = new Intent(Departement.this,LicenceActivity.class);
                 startActivity(LicenceActivityIntent);
 
             }
@@ -40,7 +40,7 @@ public class acceuilActivity extends AppCompatActivity {
         Master.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent MasterActivityIntent = new Intent(acceuilActivity.this,MasterActivity.class);
+                Intent MasterActivityIntent = new Intent(Departement.this,MasterActivity.class);
                 startActivity(MasterActivityIntent);
             }
         });

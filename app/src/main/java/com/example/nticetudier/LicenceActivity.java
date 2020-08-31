@@ -17,12 +17,12 @@ public class LicenceActivity extends AppCompatActivity {
 
         TI = findViewById(R.id.TI);
 
-        TI.setOnClickListener(new View.OnClickListener() {
+     /*   TI.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent ForumActivityIntent = new Intent(LicenceActivity.this,ForumActivity.class);
+                Intent ForumActivityIntent = new Intent(LicenceActivity.this,SpecialiteActivity.class);
                 startActivity(ForumActivityIntent);
             }
-        });
+        });*/
     }
 }

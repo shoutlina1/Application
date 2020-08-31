@@ -1,17 +1,12 @@
 package com.example.nticetudier;
 
 import androidx.appcompat.app.AppCompatActivity;
-import android.content.Context;
+
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.Toast;
-
-import android.os.Bundle;
-import android.widget.ImageView;
 
 public class PreinscriptionActivity extends AppCompatActivity {
 
@@ -44,7 +39,7 @@ public class PreinscriptionActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(),"Vous avez choisi le profile : Enseignant !",Toast.LENGTH_LONG).show();
-                Intent inscripEnseignant =new Intent(PreinscriptionActivity.this ,inscrireActivity.class);
+                Intent inscripEnseignant =new Intent(PreinscriptionActivity.this , inscriptionEnseignant.class);
                 //inscrireActivityIntent.putExtra("type","Enseignant");
                 startActivity(inscripEnseignant);
 

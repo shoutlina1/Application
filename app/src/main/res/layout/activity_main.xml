@@ -5,33 +5,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.nticetudier.MainActivity"
-    android:background="@drawable/a">
-    <EditText
+    tools:context="com.example.nticetudier.loginActivity"
+    android:background="@drawable/bg_Pic">
 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="150dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="0dp"
-        android:hint="s'identifier:"
-        android:paddingTop="200dp"
+    <EditText
+        android:layout_width="282dp"
+        android:layout_height="39dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="50dp"
+        android:hint="Email..:"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="250dp"
+        android:textColor="@color/colorPrimaryDark"
         android:id="@+id/username"></EditText>
 
-
-
-
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="150dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="10dp"
+        android:layout_width="282dp"
+        android:layout_height="39dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
         android:id="@+id/password"
-
-        android:paddingTop="10dp"
-
-        android:hint="mot de passe:"
+        android:hint="Password"
+        android:layout_marginBottom="20dp"
         android:inputType="textPassword"> </EditText>
 
 
@@ -40,14 +37,14 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginBottom="10dp"
-        android:hint="se connecter "
+        android:hint="Login "
         android:id="@+id/login"></Button>
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="176dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
-        android:hint="s'inscrire"
+        android:hint="Sign up"
         android:paddingTop="5dp"
         android:id="@+id/inscription"></Button>
 

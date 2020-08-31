@@ -4,14 +4,11 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
-import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -26,11 +23,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import Model.Eleve;
 import Model.Enseignant;
 import Model.Utilisateur;
 
-public class inscrireActivity extends AppCompatActivity implements View.OnClickListener {
+public class inscriptionEnseignant extends AppCompatActivity implements View.OnClickListener {
 
     EditText ETnom, ETprenom, ETusername, ETpassword, ETemail, ETnumero;
 
@@ -169,7 +165,7 @@ public class inscrireActivity extends AppCompatActivity implements View.OnClickL
                                 progressDialog.setMessage("Registration...");
                                 progressDialog.show();
                                 progressDialog.dismiss();
-                                Toast.makeText(inscrireActivity.this, "Inscription effectuée", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(inscriptionEnseignant.this, "Inscription effectuée", Toast.LENGTH_SHORT).show();
                                 //auth.signOut();
                                 //Intent success = new Intent(inscrireActivity.this, acceuilActivity.class);
                                 //startActivity(success);
@@ -178,7 +174,7 @@ public class inscrireActivity extends AppCompatActivity implements View.OnClickL
                         }
                     });
                 } else {
-                    Toast.makeText(inscrireActivity.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                    Toast.makeText(inscriptionEnseignant.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
                 }
             }
 

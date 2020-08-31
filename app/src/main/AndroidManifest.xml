@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.nticetudier">
+    package="com.example.nticetudier" >
 
     <application
         android:allowBackup="true"
@@ -8,19 +8,21 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".inscriptionEleve"></activity>
-        <activity android:name=".PreinscriptionActivity" />
+        android:theme="@style/AppTheme" >
         <activity
-            android:name=".ForumActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:name=".CommunicationActivity"
+            android:label="@string/title_activity_communication"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity android:name=".inscriptionEleve" />
+        <activity android:name=".PreinscriptionActivity" />
         <activity android:name=".FaculteActivity" />
         <activity android:name=".MasterActivity" />
         <activity android:name=".LicenceActivity" />
         <activity android:name=".TrancommunActivity" />
-        <activity android:name=".acceuilActivity" />
-        <activity android:name=".inscrireActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Departement" />
+        <activity android:name=".inscriptionEnseignant" />
+        <activity android:name=".loginActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

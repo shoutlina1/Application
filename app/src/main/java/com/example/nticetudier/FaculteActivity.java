@@ -21,7 +21,7 @@ public class FaculteActivity extends AppCompatActivity {
         ntic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent acceuilActivityIntent = new Intent(FaculteActivity.this, acceuilActivity.class);
+                Intent acceuilActivityIntent = new Intent(FaculteActivity.this, Departement.class);
                 startActivity(acceuilActivityIntent);
             }
         });
