@@ -18,4 +18,19 @@
     <!-- BUTTON -->
     <color name="button_favorite">#F06292</color>
 
-</resources>
+        <color name="login">#FFF8E1</color>
+        <color name="profile">#4bb6ef</color>
+        <color name="commencer">#000000</color>
+        <color name="white">#FFFFFF</color>
+        <color name="question">#FCF3F3</color>
+        <color name="profile_info">#BFC0C0</color>
+        <color name="bg_bubble">#FFDCDC</color>
+        <color name="chapter">#C2BEFF</color>
+        <color name="stats_chapter">#352641</color>
+
+
+
+
+
+
+    </resources>

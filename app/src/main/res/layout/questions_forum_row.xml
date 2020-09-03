@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="3dp"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true"
+    android:backgroundTint="@color/question"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/img_qst"
+            android:src="@drawable/qst"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvTitre_qst"
+            android:text="Question"
+            android:textSize="22sp"
+            android:textColor="@color/commencer"
+            android:layout_toRightOf="@+id/img_qst"
+            android:layout_toEndOf="@+id/img_qst"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/tvTime_qst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="118dp"
+            android:layout_toEndOf="@+id/img_qst"
+            android:layout_below="@+id/tvTitre_qst"
+            android:text="Time"
+            android:layout_marginTop="40dp"
+            android:textColor="@color/profile_info"
+            android:textSize="17sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvUser_qst"
+            android:text="Editeur"
+            android:textSize="18sp"
+            android:textColor="@color/profile"
+            android:layout_toRightOf="@+id/img_qst"
+            android:layout_toEndOf="@+id/img_qst"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/tvTitre_qst"
+            />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

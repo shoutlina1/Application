@@ -16,7 +16,7 @@ public class Departement extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_acceuil);
+        setContentView(R.layout.activity_specialite);
 
         Trancommun= findViewById(R.id.l1l2);
         Licence= findViewById(R.id.Lic);

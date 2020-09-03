@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".PreinscriptionActivity"
     android:orientation="vertical"
-    android:background="@drawable/c">
+    android:background="@drawable/lina">
 
 
     <androidx.appcompat.widget.AppCompatImageButton

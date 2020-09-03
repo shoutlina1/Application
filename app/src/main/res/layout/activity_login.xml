@@ -6,22 +6,34 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.nticetudier.loginActivity"
-    android:background="@drawable/bg_Pic">
+    android:background="@drawable/lina">
+
+
+
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="120dp"
+        android:src="@drawable/study"/>
+0
+
 
     <EditText
         android:layout_width="282dp"
-        android:layout_height="39dp"
+        android:layout_height="45dp"
         android:layout_marginLeft="70dp"
         android:layout_marginRight="50dp"
         android:hint="Email..:"
         android:paddingLeft="10dp"
-        android:layout_marginTop="250dp"
+        android:layout_marginBottom="20dp"
         android:textColor="@color/colorPrimaryDark"
         android:id="@+id/username"></EditText>
 
     <EditText
         android:layout_width="282dp"
-        android:layout_height="39dp"
+        android:layout_height="45dp"
         android:layout_marginLeft="70dp"
         android:layout_marginRight="50dp"
         android:layout_marginTop="10dp"

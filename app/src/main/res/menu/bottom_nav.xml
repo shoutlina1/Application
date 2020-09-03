@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+
+    <item
+        android:id="@+id/nav_forum"
+        android:icon="@drawable/ic_baseline_question_answer_24"
+        android:title="Forum" />
+
+    <item
+        android:id="@+id/nav_modu"
+        android:icon="@drawable/ic_module_24"
+        android:title="Module" />
+    <item
+        android:id="@+id/nav_event"
+        android:icon="@drawable/ic_baseline_emoji_objects_24"
+        android:title="Evenement" />
+
+</menu>

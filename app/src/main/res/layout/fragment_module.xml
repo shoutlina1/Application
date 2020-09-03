@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/module">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="170dp"
+            android:background="@drawable/dam"
+            android:layout_marginTop="70dp"
+            android:layout_marginStart="30dp"
+            android:id="@+id/dam"></ImageView>
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="20dp"
+            android:text="programation mobile 1"
+            android:layout_marginStart="40dp"></TextView>
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="170dp"
+            android:background="@drawable/daw"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="30dp"
+            android:id="@+id/daw"></ImageView>
+        <TextView
+            android:layout_width="170dp"
+            android:layout_height="20dp"
+            android:text="programation web 2"
+            android:layout_marginStart="40dp"
+            ></TextView>
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="170dp"
+            android:background="@drawable/bdm"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="30dp"
+            android:id="@+id/bdm"></ImageView>
+        <TextView
+            android:layout_width="170dp"
+            android:layout_height="20dp"
+            android:text="Base de donnees"
+            android:layout_marginStart="40dp"
+            ></TextView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="170dp"
+            android:background="@drawable/gl"
+            android:layout_marginTop="70dp"
+            android:layout_marginStart="210dp"
+            android:id="@+id/gl"></ImageView>
+        <TextView
+            android:layout_width="170dp"
+            android:layout_height="20dp"
+            android:text="genie logiciel 2"
+
+            android:layout_marginStart="240dp"></TextView>
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="170dp"
+            android:background="@drawable/rc"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="210dp"
+            android:id="@+id/rc"></ImageView>
+        <TextView
+            android:layout_width="170dp"
+            android:layout_height="20dp"
+            android:text="Sécurité des  Réseaux"
+            android:layout_marginStart="220dp"
+            ></TextView>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

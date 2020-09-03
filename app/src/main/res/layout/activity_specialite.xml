@@ -9,7 +9,7 @@
     android:orientation="vertical"
     android:padding="20dp"
     tools:context=".Departement"
-    android:background="@drawable/aa">
+    android:background="@drawable/raye">
 
  <Space
      android:layout_width="match_parent"

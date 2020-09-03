@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".LicenceActivity"
     android:orientation="vertical"
-    android:background="@drawable/d">
+    android:background="@drawable/licence">
 
 
 
